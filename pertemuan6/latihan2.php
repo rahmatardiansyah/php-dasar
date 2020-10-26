@@ -35,7 +35,7 @@
  <body>
  	<?php foreach ($mahasiswa as $mhs): ?>
  		<ul>
- 			<li><img src="img/<?php echo $mhs["gambar"]; ?>" alt=""></li>
+ 			<li><img src="img/<?php echo $mhs["gambar"]; ?>" alt="" width="100px" height="100px"></li>
  			<li>Nama :<?php echo $mhs["nama"]; ?></li>
  			<li>NPM : <?php echo $mhs["npm"]; ?></li>
  			<li>Email : <?php echo $mhs["email"]; ?></li>

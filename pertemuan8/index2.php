@@ -11,8 +11,9 @@
 	<title>Halaman Admin</title>
 </head>
 <body>
+	<font face="Times New Roman">
 	<h1>Daftar Mahasiswa</h1>
-
+	</font>
 	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
 			<th>No.</th>

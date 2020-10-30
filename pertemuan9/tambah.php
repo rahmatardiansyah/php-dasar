@@ -34,7 +34,7 @@ require 'functions.php';
 		<ul>
 			<li>
 				<label for="npm">NPM : </label>
-				<input type="text" name="npm" id="npm">
+				<input type="text" name="npm" id="npm" required>
 			</li>
 			<li>
 				<label for="nama">Nama : </label>

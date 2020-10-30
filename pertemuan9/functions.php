@@ -21,11 +21,12 @@ function tambah($data){
 		//ambil data dari tiap element dalam form
 		// simpan dulu ke dalam variable supaya saat query dibuat tidak kesulitan.
 		// jika dimakssukan ke fucntions tidak lagi menggunakan variabel $_POST tetapi menggunakan variabel argumen/parameter yg dikirim yaitu $data
-		$nama = $data["nama"];
-		$npm = $data["npm"];
-		$email = $data["email"];
-		$jurusan = $data["jurusan"];
-		$gambar = $data["gambar"];
+		// htmlspecialchars() berguna untuk mengubah tag html menjadi string
+		$nama = htmlspecialchars($data["nama"]);
+		$npm = htmlspecialchars($data["npm"]);
+		$email = htmlspecialchars($data["email"]);
+		$jurusan = htmlspecialchars($data["jurusan"]);
+		$gambar = htmlspecialchars($data["gambar"]);
 
 		//query untuk insert data
 		$query = "INSERT INTO mahasiswa VALUES ('','$nama','$npm','$email','$jurusan','$gambar')";
@@ -42,5 +43,14 @@ function tambah($data){
 		// 	echo "<br>";
 		// 	echo mysqli_error($koneksi);
 		// }
+
+function hapus($id)
+{
+	global $koneksi;
+	mysqli_query($koneksi,"DELETE FROM mahasiswa where id = $id");
+
+	// kembalikan nilai query berhasil atau tidak
+	return mysqli_affected_rows($koneksi);
+}
 
  ?>

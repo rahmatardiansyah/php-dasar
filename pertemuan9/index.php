@@ -33,7 +33,8 @@
 				<td><?php echo $i; ?></td>
 				<td>
 					<a href="">Ubah</a> |
-					<a href="">hapus</a>
+					<!-- kalau return confirm mengambalikan nilai true artinya akan mengujungi halaman hapus -->
+					<a href="hapus.php?id=<?php echo $row["id"]; ?>" onclick="return confirm('yakin?')">hapus</a>
 				</td>
 				<td><img src="img/<?php echo $row["gambar"]; ?>" alt="" width="100px" height="100px"></td>
 				<td><?php echo $row["npm"]; ?></td>
